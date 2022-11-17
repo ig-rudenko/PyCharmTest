@@ -1,7 +1,6 @@
 import time
 
 
-# Декоратор
 def timer(function):
     print('Зашли в timer')
 
@@ -21,13 +20,13 @@ def timer(function):
             end - start
         )
 
-        return result  # Результат!!!!
+        return result
 
     print("Передали в функцию wrapper", function.__name__)
     return wrapper
 
 
-@timer  # factorial = timer(factorial)
+@timer
 def factorial(n):
     if n == 0:
         return 1
