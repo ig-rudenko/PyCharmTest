@@ -23,14 +23,14 @@ def len_matrix(mn):
         for number in row:
             if number > l:
                 l = int(number)
-    return (l)
+    return l
 
 
 len_matrix(matrix)
 
 for row in matrix:
     for number in row:
-        if number >= 10 and number < 100:
+        if 10 <= number < 100:
             print(number, end=' ')
         elif number < 10:
             print(number, end='   ')

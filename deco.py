@@ -10,7 +10,7 @@ def timer(function):
         print('Начало декоратора')
         start: float = time.time()
 
-        result = function(*args, **kwargs)  # Вызов функции <<<<<<<<<<<<<<<<<<<<<
+        result = function(*args, **kwargs)
 
         end: float = time.time()
         print(
@@ -34,13 +34,6 @@ def factorial(n):
     for i in range(1, n + 1):
         x *= i
     return x
-
-
-@timer
-def factorial_rec(n):
-    if n == 0:
-        return 1
-    return n * factorial_rec(n - 1)
 
 
 factorial(900)
