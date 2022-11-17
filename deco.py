@@ -13,12 +13,6 @@ def timer(function):
         result = function(*args, **kwargs)
 
         end: float = time.time()
-        print(
-            "Время выполнения функции",
-            function.__name__,
-            f"args = {args}",
-            end - start
-        )
 
         return result
 
